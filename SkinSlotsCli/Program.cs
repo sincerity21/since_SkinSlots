@@ -32,14 +32,13 @@ internal static class Program
                 DisplayName = Option(args, "--name"),
                 Description = Option(args, "--description"),
                 Slot = ParseSlot(Option(args, "--slot")),
-                SlotsDirectory = Option(args, "--slots-dir"),
-                AssignmentPath = Option(args, "--assignments")
+                ModsDirectory = Option(args, "--mods")
             };
 
             var result = SkinSlotBuilder.Build(request, Console.WriteLine);
-            Console.WriteLine($"Pak: {result.PakPath}");
-            Console.WriteLine($"Manifest: {result.ManifestPath}");
-            Console.WriteLine($"Row: {result.Manifest.RowName}  pawn: {result.Manifest.Pawn}");
+            Console.WriteLine($"Skin pak: {result.PakPath}");
+            Console.WriteLine($"Table pak: {result.DataPakPath}");
+            Console.WriteLine($"Pawn: {result.Manifest.Pawn}");
             return 0;
         }
         catch (Exception ex)
@@ -54,7 +53,7 @@ internal static class Program
         if (string.IsNullOrWhiteSpace(text))
             return null;
         if (!int.TryParse(text, out var slot))
-            throw new InvalidOperationException($"--slot must be a folder index from 50 to 99. Got '{text}'.");
+            throw new InvalidOperationException($"--slot is the hangar number, such as 13 for the F-16C. Got '{text}'.");
         return slot;
     }
 
@@ -72,20 +71,22 @@ internal static class Program
     private static void PrintHelp()
     {
         Console.WriteLine("""
+            sincerity's Skin Re-Slotter
             SkinSlotsCli <skin.pak or unpacked folder> [options]
 
               --unrealpak <UnrealPak.exe>   Required for a .pak source and for packing.
-              --name <text>                 Hangar name written into the manifest.
-              --description <text>          Hangar description written into the manifest.
-              --output <file.pak>           Output pak. Defaults beside the source.
-              --pawns <folder>              Stock AcePlayerPawn library.
-              --slot <50-99>                Force a private folder index. Otherwise the next free one is used.
-              --slots-dir <folder>          Also copy the manifest here for the UE4SS mod.
-              --assignments <file.json>     Slot ledger. Defaults to %AppData%\since_SkinSlots\assignments.json.
-              --self-test                   Clone the stock F-16C s02 pawn to slot 50 and check the retarget.
+              --name <text>                 Hangar name written into localization.
+              --description <text>          Hangar description written into localization.
+              --output <file.pak>           Skin pak path. Defaults to SkinReSlotter_F-16C_Name_Skin13_P.pak in the mods folder.
+              --pawns <folder>              Stock AcePlayerPawn library. The saved SkinDataTable and localization sit beside it.
+              --mods <folder>               Game ~mods folder. A SkinDataTable or localization in there is used instead of the saved game files.
+              --slot <number>               Hangar slot, such as 13. Otherwise the next slot after the latest skin in the table is used.
+              --self-test                   Count the saved pawns and clone the stock F-16C s02 pawn to s12.
 
-            The pak contains the cloned skin pawn and the moved materials. It does not contain SkinDataTable.
-            Copy the .skin_slot.ini into ue4ss/Mods/SkinSlots/Scripts/slots/ and the pak into ~mods.
+            A skin made for slot 3 is cloned from the stock s02 pawn. Slot 13 uses pawn s12.
+            The skin pak holds the textures and the pawn. SkinReSlotter_Data_P holds the table and the names, with enough leading tildes to mount last.
+            A skin pak that is already in the mods folder is left alone. The table pak is written again.
+            Put both paks in the game ~mods folder.
             """);
     }
 }

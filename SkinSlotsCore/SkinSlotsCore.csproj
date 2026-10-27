@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\since_SkinConverter\SkinConverterCore\SkinConverterCore.csproj" />
+    <ProjectReference Include="..\..\Ace7Ed-master\Ace7-Localization-Format\Ace7LocalizationFormat\Ace7LocalizationFormat.csproj" />
   </ItemGroup>
 
 </Project>
