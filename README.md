@@ -87,6 +87,11 @@ The check below clones a stock F-16C pawn and reads the saved table. Point `--pa
 dotnet SkinSlotsCli\bin\Release\net8.0\SkinSlotsCli.dll --self-test --pawns <...\Game\Blueprint\Player\Pawn>
 ```
 
+## Contributors
+
+- **sincerity**, author of sincerity's Skin Re-Slotter.
+- **Cursor**, AI coding assistant and contributor. See the disclaimer above.
+
 ## Credits
 
 - **[(AC7/UE4) UnrealPak Enhanced](https://www.moddb.com/downloads/unrealpak-enhanced)**, by Rythus (VDG_Rythus). It packs and unpacks the paks. Rythus built this enhanced version on FluffyQuack's standalone UnrealPak and the Unreal Engine 4.18 binary. The page credits Epic Games for the original binaries and FluffyQuack for the original batch scripts.
@@ -95,4 +100,3 @@ dotnet SkinSlotsCli\bin\Release\net8.0\SkinSlotsCli.dll --self-test --pawns <...
 - The slot rewriting shared with the Ace Combat 7 skin converter.
 - **[UModel](https://www.gildor.org/en/projects/umodel)**, by Gildor, for exporting the saved game files the pawn library is built from.
 - **[Newtonsoft.Json](https://www.newtonsoft.com/json)**, by James Newton-King, used through UAssetAPI.
-- Cursor, the AI coding assistant this program was written with. See the disclaimer above.
