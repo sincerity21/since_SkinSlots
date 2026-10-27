@@ -44,6 +44,28 @@ The paths and the log.
 
 ![The paths and the log](docs/window-bottom.png)
 
+### In the hangar (Examples)
+
+Mirage 2000-5 — 100th Anniversary Skin on slot 09.
+
+![Mirage 2000-5 100th Anniversary Skin](docs/result-mirage-100th.jpg)
+
+Su-30M2 — TNI AU Splinter Skin on slot 08.
+
+![Su-30M2 TNI AU Splinter Skin](docs/result-su30-splinter.jpg)
+
+F-16C — Viper Demo Skin on slot 13.
+
+![F-16C Viper Demo Skin](docs/result-f16c-viper-demo.jpg)
+
+F/A-18F — VFC-111 Shenyang Skin on slot 12.
+
+![F/A-18F VFC-111 Shenyang Skin](docs/result-f18f-vfc111.jpg)
+
+F/A-18E | TGM — Fightin' Sparrows Skin on slot 07.
+
+![F/A-18E Fightin' Sparrows Skin](docs/result-f18e-fightin-sparrows.jpg)
+
 ## How it works
 
 A skin replacer overwrites a slot the game already has. This tool copies that skin onto a new hangar line.
