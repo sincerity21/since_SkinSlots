@@ -1,10 +1,10 @@
 # sincerity's Skin Re-Slotter
 
-sincerity's Skin Re-Slotter turns an Ace Combat 7 skin-replacer pak into a new hangar line. It clones a skin pawn, adds a row to the skin data table, writes the hangar name and description, and packs the result with [UnrealPak Enhanced](https://www.moddb.com/downloads/unrealpak-enhanced).
+sincerity's Skin Re-Slotter turns an Ace Combat 7 skin-replacer pak into it's own new slot, with custom names and descriptions. It clones a skin pawn, adds a row to the skin data table, writes the hangar name and description, and packs the result with [UnrealPak Enhanced](https://www.moddb.com/downloads/unrealpak-enhanced).
 
 ## Disclaimer
 
-This program was written with an AI coding assistant. Treat the output as unreviewed until you have checked it. Read a generated pak in UAssetGUI, and fly the skin in-game, before you share it.
+This program was written with an AI coding assistant. Treat the output as unreviewed until you have checked it. 
 
 Unless you are the author of the skin mod you are re-slotting, you are generally not allowed to publish the result.
 
